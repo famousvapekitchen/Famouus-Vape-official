@@ -131,7 +131,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
-            {(currentRole === 'staff' || currentRole === 'admin') && (
+            {currentRole === 'admin' && (
               <button
                 id="btn-quick-add-sales"
                 onClick={() => onNavigate('input_sales')}

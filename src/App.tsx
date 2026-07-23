@@ -15,6 +15,7 @@ import { LoginModal } from './components/LoginModal';
 
 function MainAppContent() {
   const [activeTab, setActiveTab] = useState<TabType>('dashboard');
+  const { currentRole } = useApp();
   
   // Incentive Slip Modal state
   const [selectedStaffForSlip, setSelectedStaffForSlip] = useState<string | null>(null);
@@ -25,6 +26,13 @@ function MainAppContent() {
 
   // Login Modal state
   const [isLoginModalOpen, setIsLoginModalOpen] = useState<boolean>(false);
+
+  // Auto-switch away from input_sales if current role is staff or owner
+  React.useEffect(() => {
+    if (activeTab === 'input_sales' && currentRole !== 'admin') {
+      setActiveTab('dashboard');
+    }
+  }, [currentRole, activeTab]);
 
   const handleOpenSlipForStaff = (staffId: string) => {
     setSelectedStaffForSlip(staffId);
@@ -66,7 +74,7 @@ function MainAppContent() {
             />
           )}
 
-          {activeTab === 'input_sales' && <SalesEntryView />}
+          {activeTab === 'input_sales' && currentRole === 'admin' && <SalesEntryView />}
 
           {activeTab === 'focus_products' && <FocusProductManager />}
 
