@@ -1,0 +1,6 @@
+{
+  "name": "Famous Vape Official - System Insentif Produk Fokus",
+  "description": "Aplikasi manajemen produk fokus, sellout, target brand, dan kalkulasi slip insentif bulanan untuk Staff, Admin, dan Owner toko vape.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
