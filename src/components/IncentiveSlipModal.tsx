@@ -41,12 +41,12 @@ export const IncentiveSlipModal: React.FC<IncentiveSlipModalProps> = ({
       <div className="bg-white rounded-2xl max-w-3xl w-full my-8 shadow-2xl border border-slate-200 overflow-hidden flex flex-col">
         
         {/* Top Modal Controls (Hidden when printing) */}
-        <div className="bg-[#0B1437] text-white px-6 py-4 flex items-center justify-between border-b border-slate-800 print:hidden">
+        <div className="bg-gradient-to-r from-[#0F172A] via-[#1E1B4B] to-[#2E1065] text-white px-6 py-4 flex items-center justify-between border-b border-indigo-500/30 print:hidden">
           <div className="flex items-center space-x-3">
-            <Receipt className="w-5 h-5 text-blue-400" />
+            <Receipt className="w-5 h-5 text-cyan-400" />
             <div>
               <h3 className="font-bold text-sm text-white">Slip Insentif Produk Fokus Staff</h3>
-              <p className="text-[11px] text-[#A3AED0]">Pilih staff dan cetak dokumen resmi akhir bulan</p>
+              <p className="text-[11px] text-indigo-200/80">Pilih staff dan cetak dokumen resmi akhir bulan</p>
             </div>
           </div>
 
@@ -55,10 +55,10 @@ export const IncentiveSlipModal: React.FC<IncentiveSlipModalProps> = ({
             <select
               value={activeStaffId}
               onChange={(e) => setActiveStaffId(e.target.value)}
-              className="bg-[#111C44] border border-slate-700 text-white text-xs font-semibold rounded-xl px-3 py-1.5 focus:outline-none"
+              className="bg-[#181E3B] border border-indigo-500/40 text-white text-xs font-semibold rounded-xl px-3 py-1.5 focus:outline-none"
             >
               {staffList.map((s) => (
-                <option key={s.id} value={s.id}>
+                <option key={s.id} value={s.id} className="bg-[#1E1B4B]">
                   {s.name} ({s.branchName})
                 </option>
               ))}

@@ -65,9 +65,9 @@ export const StaffBrandMatrixView: React.FC<StaffBrandMatrixViewProps> = ({
         <div className="flex items-center space-x-3">
           <button
             onClick={() => window.print()}
-            className="bg-[#0B1437] hover:bg-[#111C44] text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5 cursor-pointer"
+            className="bg-gradient-to-r from-[#4318FF] to-indigo-600 hover:from-[#3810E6] hover:to-indigo-500 text-white font-bold text-xs px-3.5 py-2.5 rounded-2xl transition flex items-center space-x-1.5 cursor-pointer shadow-md"
           >
-            <Download className="w-4 h-4 text-slate-300" />
+            <Download className="w-4 h-4 text-white" />
             <span>Cetak Rekap Matriks</span>
           </button>
         </div>
@@ -115,21 +115,21 @@ export const StaffBrandMatrixView: React.FC<StaffBrandMatrixViewProps> = ({
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs border-collapse">
             <thead>
-              <tr className="bg-[#0B1437] text-white text-[11px] font-bold uppercase tracking-wider">
-                <th className="py-3.5 px-4 sticky left-0 bg-[#0B1437] z-10">Peringkat & Staff</th>
+              <tr className="bg-gradient-to-r from-[#0F172A] via-[#1E1B4B] to-[#2E1065] text-white text-[11px] font-bold uppercase tracking-wider border-b border-indigo-500/30">
+                <th className="py-3.5 px-4 sticky left-0 bg-[#0F172A] z-10">Peringkat & Staff</th>
                 <th className="py-3.5 px-4">Cabang Store</th>
                 {allBrands.map((brand) => (
-                  <th key={brand} className="py-3.5 px-4 text-center border-l border-slate-800 min-w-[120px]">
+                  <th key={brand} className="py-3.5 px-4 text-center border-l border-indigo-500/30 min-w-[120px]">
                     {brand}
                   </th>
                 ))}
-                <th className="py-3.5 px-4 text-center border-l border-slate-800 bg-[#111C44] font-extrabold text-blue-300">
+                <th className="py-3.5 px-4 text-center border-l border-indigo-500/30 bg-[#181E3B] font-extrabold text-cyan-300">
                   Total Unit
                 </th>
-                <th className="py-3.5 px-4 text-right border-l border-slate-800 bg-[#111C44] font-extrabold text-emerald-300">
+                <th className="py-3.5 px-4 text-right border-l border-indigo-500/30 bg-[#181E3B] font-extrabold text-emerald-300">
                   Total Insentif (Rp)
                 </th>
-                <th className="py-3.5 px-4 text-center border-l border-slate-800">Aksi Slip</th>
+                <th className="py-3.5 px-4 text-center border-l border-indigo-500/30">Aksi Slip</th>
               </tr>
             </thead>
 
@@ -195,8 +195,8 @@ export const StaffBrandMatrixView: React.FC<StaffBrandMatrixViewProps> = ({
 
             {/* Matrix Footer Totals */}
             <tfoot>
-              <tr className="bg-[#0B1437] text-white font-extrabold text-xs">
-                <td className="py-3.5 px-4 sticky left-0 bg-[#0B1437] z-10" colSpan={2}>
+              <tr className="bg-gradient-to-r from-[#0F172A] via-[#1E1B4B] to-[#2E1065] text-white font-black text-xs border-t border-indigo-500/30">
+                <td className="py-3.5 px-4 sticky left-0 bg-[#0F172A] z-10" colSpan={2}>
                   TOTAL GLOBAL REKAPITULASI
                 </td>
                 {allBrands.map((brand) => {

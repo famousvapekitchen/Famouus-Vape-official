@@ -112,44 +112,36 @@ export const StaffDashboardView: React.FC<StaffDashboardViewProps> = ({
     <div className="space-y-6">
       
       {/* Welcome Banner Personal Staff */}
-      <div className="bg-gradient-to-r from-[#0B1437] via-[#111C44] to-[#1B254B] rounded-2xl p-6 text-white border border-slate-800/80 shadow-xl relative overflow-hidden">
-        <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#4318FF]/30 via-transparent to-transparent pointer-events-none" />
+      <div className="bg-gradient-to-r from-[#0F172A] via-[#1E1B4B] to-[#2E1065] rounded-3xl p-6 text-white border border-indigo-500/30 shadow-2xl relative overflow-hidden">
+        <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cyan-400/20 via-[#4318FF]/20 to-transparent pointer-events-none" />
         
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 relative z-10">
           <div>
             <div className="flex items-center space-x-2">
-              <span className="bg-[#4318FF] text-white text-xs font-bold px-3 py-1 rounded-full flex items-center space-x-1 shadow-md shadow-[#4318FF]/40">
+              <span className="bg-gradient-to-r from-[#4318FF] to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center space-x-1 shadow-lg shadow-[#4318FF]/40">
                 <User className="w-3.5 h-3.5 mr-1" />
                 <span>Dashboard Staff Toko</span>
               </span>
-              <span className="bg-[#111C44] text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-md border border-slate-700">
+              <span className="bg-[#181E3B] text-indigo-200 text-xs font-bold px-2.5 py-1 rounded-lg border border-indigo-500/40">
                 {mySummary.branchName}
               </span>
-              <span className="bg-[#4318FF]/20 text-blue-300 text-xs font-semibold px-2.5 py-1 rounded-md border border-[#4318FF]/30">
+              <span className="bg-[#4318FF]/30 text-cyan-200 text-xs font-bold px-2.5 py-1 rounded-lg border border-[#4318FF]/40">
                 Periode: {getMonthName(selectedPeriod)}
               </span>
             </div>
 
-            <h2 className="text-2xl font-bold mt-2 text-white tracking-tight flex items-center gap-2">
+            <h2 className="text-2xl font-black mt-2.5 text-white tracking-tight flex items-center gap-2">
               <span>Halo, {currentUser.name}!</span>
             </h2>
-            <p className="text-slate-300 text-xs mt-1 max-w-xl">
+            <p className="text-indigo-200/90 text-xs mt-1 max-w-xl font-medium">
               Berikut adalah ringkasan pendapatan insentif personal Anda, jumlah qtty terjual per brand, serta peringkat performa tim toko.
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5">
             <button
-              onClick={() => onNavigate('input_sales')}
-              className="bg-[#4318FF] hover:bg-[#3810E6] text-white font-bold text-xs px-4 py-2.5 rounded-xl transition flex items-center space-x-2 shadow-lg shadow-[#4318FF]/30 cursor-pointer"
-            >
-              <PlusCircle className="w-4 h-4" />
-              <span>Input Sell-out Penjualan</span>
-            </button>
-
-            <button
               onClick={() => onOpenSlipForStaff(currentUser.id)}
-              className="bg-[#111C44] hover:bg-[#1B254B] text-slate-200 border border-slate-700 font-bold text-xs px-3.5 py-2.5 rounded-xl transition flex items-center space-x-1.5 cursor-pointer"
+              className="bg-[#181E3B] hover:bg-[#251B4E] text-white border border-indigo-500/40 font-bold text-xs px-4 py-2.5 rounded-2xl transition flex items-center space-x-2 cursor-pointer shadow-lg"
             >
               <Receipt className="w-4 h-4 text-emerald-400" />
               <span>Cetak Slip Insentif Saya</span>
@@ -240,25 +232,16 @@ export const StaffDashboardView: React.FC<StaffDashboardViewProps> = ({
       {/* SECTION 2: JUMLAH QTTY PERBRAND YG SUDAH TERKUMPUL & NOMINAL INSENTIF */}
       <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-[0_4px_20px_0_rgba(112,144,176,0.08)] space-y-4">
         
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <div>
-            <div className="flex items-center space-x-2">
-              <Layers className="w-5 h-5 text-[#4318FF]" />
-              <h3 className="text-base font-bold text-[#2B3674]">
-                Akumulasi Qtty Per-Brand & Nominal Insentif ({currentUser.name})
-              </h3>
-            </div>
-            <p className="text-xs text-[#A3AED0] mt-0.5">
-              Rincian jumlah unit (Qtty) produk fokus yang telah Anda jual dan nominal rupiah insentif per brand
-            </p>
+        <div>
+          <div className="flex items-center space-x-2">
+            <Layers className="w-5 h-5 text-[#4318FF]" />
+            <h3 className="text-base font-bold text-[#2B3674]">
+              Akumulasi Qtty Per-Brand & Nominal Insentif ({currentUser.name})
+            </h3>
           </div>
-          <button
-            onClick={() => onNavigate('input_sales')}
-            className="text-xs font-bold text-[#4318FF] hover:bg-[#4318FF]/10 px-3 py-1.5 rounded-lg border border-[#4318FF]/30 transition inline-flex items-center space-x-1"
-          >
-            <PlusCircle className="w-3.5 h-3.5" />
-            <span>Tambah Penjualan</span>
-          </button>
+          <p className="text-xs text-[#A3AED0] mt-0.5">
+            Rincian jumlah unit (Qtty) produk fokus yang telah Anda jual dan nominal rupiah insentif per brand
+          </p>
         </div>
 
         <div className="overflow-x-auto">
@@ -316,14 +299,14 @@ export const StaffDashboardView: React.FC<StaffDashboardViewProps> = ({
 
             {/* Table Footer Totals */}
             <tfoot>
-              <tr className="bg-[#0B1437] text-white font-extrabold text-xs">
+              <tr className="bg-gradient-to-r from-[#0F172A] via-[#1E1B4B] to-[#2E1065] text-white font-black text-xs border-t border-indigo-500/30">
                 <td className="py-3.5 px-4 rounded-l-xl">
                   TOTAL INSENTIF & QTTY PENDAPATAN SAYA
                 </td>
-                <td className="py-3.5 px-4 text-center text-slate-300">
+                <td className="py-3.5 px-4 text-center text-indigo-300">
                   -
                 </td>
-                <td className="py-3.5 px-4 text-center text-blue-300 font-black text-sm">
+                <td className="py-3.5 px-4 text-center text-cyan-300 font-black text-sm">
                   {formatNumber(mySummary.totalQuantity)} Unit
                 </td>
                 <td className="py-3.5 px-4 text-right text-emerald-300 font-black text-base">

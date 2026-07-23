@@ -249,14 +249,14 @@ export const OwnerAnalyticsView: React.FC = () => {
 
             {/* Table Footer */}
             <tfoot>
-              <tr className="bg-[#0B1437] text-white font-extrabold text-xs">
+              <tr className="bg-gradient-to-r from-[#0F172A] via-[#1E1B4B] to-[#2E1065] text-white font-black text-xs border-t border-indigo-500/30">
                 <td className="py-3.5 px-4 rounded-l-xl">
                   TOTAL BIAYA LIABILITAS INSENTIF BRAND
                 </td>
-                <td className="py-3.5 px-4 text-center text-slate-300">
+                <td className="py-3.5 px-4 text-center text-indigo-200">
                   {formatNumber(brandTargetSummaries.reduce((acc, curr) => acc + curr.targetQuantity, 0))} u
                 </td>
-                <td className="py-3.5 px-4 text-center text-blue-300 font-bold">
+                <td className="py-3.5 px-4 text-center text-cyan-300 font-bold">
                   {formatNumber(totalGlobalUnitsSold)} unit
                 </td>
                 <td className="py-3.5 px-4 text-right text-emerald-300 font-black text-base">

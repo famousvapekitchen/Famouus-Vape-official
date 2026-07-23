@@ -589,9 +589,9 @@ export const MasterManagementView: React.FC = () => {
       {/* EDIT / ADD MODAL CABANG STORE */}
       {/* ---------------------------------------------------- */}
       {(editingBranch || isAddBranchOpen) && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl border border-slate-100 overflow-hidden">
-            <div className="bg-[#0B1437] text-white p-5 flex items-center justify-between">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-md p-4">
+          <div className="bg-white rounded-3xl max-w-md w-full shadow-2xl border border-indigo-500/30 overflow-hidden">
+            <div className="bg-gradient-to-r from-[#0F172A] via-[#1E1B4B] to-[#2E1065] text-white p-5 flex items-center justify-between">
               <h3 className="font-bold text-sm">
                 {editingBranch ? 'Ubah Nama Cabang Store' : 'Tambah Cabang Store Baru'}
               </h3>
@@ -685,9 +685,9 @@ export const MasterManagementView: React.FC = () => {
       {/* EDIT / ADD MODAL STAFF TOKO */}
       {/* ---------------------------------------------------- */}
       {(editingStaff || isAddStaffOpen) && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl border border-slate-100 overflow-hidden">
-            <div className="bg-[#0B1437] text-white p-5 flex items-center justify-between">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-md p-4">
+          <div className="bg-white rounded-3xl max-w-md w-full shadow-2xl border border-indigo-500/30 overflow-hidden">
+            <div className="bg-gradient-to-r from-[#0F172A] via-[#1E1B4B] to-[#2E1065] text-white p-5 flex items-center justify-between">
               <h3 className="font-bold text-sm">
                 {editingStaff ? 'Ubah Nama Staff Toko' : 'Tambah Staff Toko Baru'}
               </h3>
@@ -788,9 +788,9 @@ export const MasterManagementView: React.FC = () => {
       {/* EDIT / ADD MODAL INSENTIF RATE */}
       {/* ---------------------------------------------------- */}
       {(editingProduct || isAddProductOpen) && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl border border-slate-100 overflow-hidden">
-            <div className="bg-[#0B1437] text-white p-5 flex items-center justify-between">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-md p-4">
+          <div className="bg-white rounded-3xl max-w-md w-full shadow-2xl border border-indigo-500/30 overflow-hidden">
+            <div className="bg-gradient-to-r from-[#0F172A] via-[#1E1B4B] to-[#2E1065] text-white p-5 flex items-center justify-between">
               <h3 className="font-bold text-sm">
                 {editingProduct ? 'Ubah Nilai Insentif Produk Fokus' : 'Tambah Produk Fokus & Rate Insentif'}
               </h3>
